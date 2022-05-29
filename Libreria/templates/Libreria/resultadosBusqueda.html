@@ -1,0 +1,22 @@
+{% extends 'Libreria/padre.html' %}
+
+{% load static %}
+
+{% block contenido2 %}
+
+
+    <p>Los prestamos de {{lector}} son:  </p>
+
+    {% if prestamos %}
+
+    <ul>
+    {% for x in prestamos %}
+      
+        <li> {{x.libro}} </li>
+    
+    {% endfor %}
+    </ul>
+
+    {% endif %}
+
+{% endblock %}

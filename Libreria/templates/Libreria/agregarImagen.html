@@ -1,0 +1,22 @@
+{% extends 'Libreria/padre.html' %}
+
+{% load static %}
+
+
+{% block contenidoModificable %}
+
+<h1>Subir Avatar</h1>
+
+<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+    <p>
+            
+        {{miFormulario.as_p}}
+
+    </p>
+
+    <input type="submit" value="Subir Imagen">
+
+
+</form>
+{% endblock %}

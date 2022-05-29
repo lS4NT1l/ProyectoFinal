@@ -1,0 +1,22 @@
+{% extends 'Libreria/padre.html' %}
+{% load static %}
+
+{% block contenido2 %}
+<h1 > Prestamos </h1>
+
+<u1>
+    {% for prestamo in object_list %}
+
+     
+     <li> {{prestamo.lector}} - {{prestamo.libro}} </li>
+        
+        <p>
+            <a href="{% url 'PrestamoDetail' prestamo.id %}"> Ver</a>
+            <a href="{% url 'PrestamoDelete' prestamo.id %}"> Borrar</a>
+        </p>
+    
+
+    {% endfor %}
+
+</u1>
+{% endblock %}

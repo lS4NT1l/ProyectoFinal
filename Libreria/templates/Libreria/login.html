@@ -1,0 +1,17 @@
+{% extends 'Libreria/padre.html' %}
+
+{% load static %}
+
+{% block contenidoModificable %}
+
+    <form action="" method="POST">  {% csrf_token %}
+
+        {{form.as_p}}
+
+        <button type="submit">Iniciar Sesión</button>
+        
+        <p>No tiene una cuenta?</p>
+        <a href="{% url 'register' %}"> Registrate </a>
+    </form>
+
+{% endblock %}

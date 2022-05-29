@@ -1,0 +1,10 @@
+{% extends 'Libreria/padre.html' %}
+{% load static %}
+
+{% block contenido2 %}
+    <p>Nombre del libro: <i> {{ libro.nombre}} </i></p>
+    <p>Libro en prestamo: <i> {{ libro.enPrestamo}} </i></p>
+    <p>
+        <a href="{% url 'ListLibros' %}"> Regresar </a>
+    </p>
+{% endblock %}

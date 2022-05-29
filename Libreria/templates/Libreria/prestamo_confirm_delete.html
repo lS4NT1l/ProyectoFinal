@@ -1,0 +1,11 @@
+{% extends 'Libreria/padre.html' %}
+{% load static %}
+
+{% block contenido2 %}
+<form method="post"> {% csrf_token %}
+
+    ¿Estás seguro que deseas borrar el prestamo?
+    <input type="submit" view="Si">
+
+</form>
+{% endblock %}

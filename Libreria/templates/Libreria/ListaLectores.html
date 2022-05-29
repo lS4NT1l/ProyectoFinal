@@ -1,0 +1,23 @@
+{% extends 'Libreria/padre.html' %}
+{% load static %}
+
+{% block contenido2 %}
+        <h1 > Lectores </h1>
+
+        <u1>
+            {% for lector in object_list %}
+
+             
+             <li> {{lector.nombre}} {{lector.apellido}} </li>
+                
+                <p>
+                    <a href="{% url 'LectorDetail' lector.id %}"> Ver</a>
+                    <a href="{% url 'LectorEdit' lector.id %}"> Editar</a>
+                    <a href="{% url 'LectorDelete' lector.id %}"> Borrar</a>
+                </p>
+            
+
+            {% endfor %}
+
+        </u1>
+{% endblock %}
